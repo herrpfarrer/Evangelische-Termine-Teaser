@@ -1,0 +1,42 @@
+.mod_etteaser .modul-content {
+  padding:0;
+  }
+  
+.etteaser_content_date {
+  font-weight:bold;
+  }
+  
+.etteaser_personname,
+.etteaser_city {
+  display:none;
+  }
+  
+.etteaser_even {
+  padding:8px 10px;
+  background:rgba(240,255,230,1);
+  }
+  
+.etteaser_odd {
+  padding:8px 10px;
+  }
+  
+.teaserlink {
+  display:block;
+  }
+  
+.teasertext{
+	margin-top:5px;
+  }
+  
+.teasertext br{
+	display: none;
+  }
+  
+.etteaser_more{
+	text-align:center;
+	margin-bottom:4px;
+}
+
+.etteaser_more a:before {
+    content: " \27A4 \00a0";
+}

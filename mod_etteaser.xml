@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>Evangelische Termine Teaser</name>
+    <author>Daniel Städtler</author>
+    <version>1.0.0</version>
+    <description>Integrieren Sie einen Teaser/eine Vorschau auf Termine, die Sie bei Evangelische Termine verwalten, in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Teaser' (v.1.0).</description>
+    <files>
+        <filename>mod_etteaser.xml</filename>
+        <filename module="mod_etteaser">mod_etteaser.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+	<media folder="media" destination="mod_etteaser">
+		<folder>css</folder>
+	</media>
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+			<field
+			name="showlink"
+			type="radio"
+			label="Zeige Link?"
+			description="Soll am Ende des Teasers ein Link zum Veranstaltungskalender bzw. zu der Webseite mit allen Veranstaltungen angezeigt werden?"
+			class="btn-group btn-group-yesno"
+			default="true"
+			>
+			<option value="true">Ja, Link anzeige</option>
+			<option value="false">Nein, Link verbergen</option>
+		</field>
+         <field
+			name="link"
+			type="text"
+			label="URL Veranstaltungskalender"
+			description="URL zum Veranstaltungskalender bzw. der Webseite mit allen Veranstaltungen."
+		/>
+        <field
+			name="veranstalterid"
+			type="text"
+			label="Veranstalter-ID"
+			description="Geben Sie hier Ihre Veranstalter-ID von www.evangelische-termine.de ein. Mehrere Ids können durch Komma getrennt angegeben werden. Für die Dekanatsausgabe geben Sie als Veranstalter-ID 'all' ein."
+			default="2220"
+			/>
+        <field
+			name="dekanatsnummer"
+			type="text"
+			label="Dekanats-Nummer"
+			description="Für die Dekanatsausgabe geben Sie hier Ihre 3-stellige Dekanatsnummer ein. Denken Sie daran, als Veranstalter-ID 'all' einzugeben. Mehrere Dekanatsnummern können durch Kommata getrennt angegeben werden."
+			default=""
+		/>
+        <field
+			name="itemsperpage"
+			type="text"
+			label="Anzahl"
+			description="Wie viele Veranstaltungen sollen angezeigt werden?"
+			default="4"
+		/>
+		<field
+			name="highlights"
+			type="radio"
+			label="Nur Highlights?"
+			description="Sollen nur Highlights oder alle Veranstaltungen angezeigt werden?"
+			class="btn-group btn-group-yesno"
+			default="all"
+			>
+			<option value="all">Alles</option>
+			<option value="high">Nur Highlights</option>
+		</field>
+        <field
+			name="eventtype"
+			type="textarea"
+			label="Kategorie"
+			description="Legen Sie fest, welche Kategorien berücksichtigt werden sollen:
+                        &lt;br /&gt;all => alle 
+                        &lt;br /&gt;1 => Gottesdienste
+                        &lt;br /&gt;2 => Gruppen / Kreise
+                        &lt;br /&gt;3 => Fortbildungen / Seminare / Vorträge
+                        &lt;br /&gt;4 => Konzerte / Theater / Musik
+                        &lt;br /&gt;5 => Freizeiten / Reisen
+                        &lt;br /&gt;6 => Ausstellungen / Kunst
+                        &lt;br /&gt;7 => Feste / Feiern
+                        &lt;br /&gt;8 => Sport/Spiel
+                        &lt;br /&gt;9 => Sonstiges
+                        &lt;br /&gt;10 => Meditation / spirituelle Angebote
+                        &lt;br /&gt;Ein vorangestelltes '-' negiert die Auswahl, z.B. -1 => alles außer Gottesdienste. 
+                        &lt;br /&gt;Mehrere Kategorien können durch Komma getrennt angegeben werden (=ODER Verknüpfung).
+                        &lt;br /&gt;Mehrere Kategorien können durch Punkt getrennt angegeben werden (= UND Verknüpfung)."
+            rows="3"
+            default="all"
+        />
+        <field
+			name="people"
+			type="textarea"
+			label="Zielgruppe"
+			description="Legen Sie fest, welche Zielgruppen berücksichtigt werden sollen:
+                        &lt;br /&gt;0 => Alle
+                        &lt;br /&gt;5 => Kinder
+                        &lt;br /&gt;40 => Konfirmanden
+                        &lt;br /&gt;10 => Jugendliche
+                        &lt;br /&gt;15 => Junge Erwachsene
+                        &lt;br /&gt;16 => Frauen
+                        &lt;br /&gt;17 => Männer
+                        &lt;br /&gt;20 => Familien
+                        &lt;br /&gt;25 => Erwachsene
+                        &lt;br /&gt;30 => Senioren
+                        &lt;br /&gt;35 => besondere Zielgruppe
+                        &lt;br /&gt;Mehrere Zielgruppen können durch Komma getrennt angegeben werden."
+            rows="3"
+            default="all"
+        />
+        <field
+			name="place"
+			type="text"
+			label="Veranstaltungsort"
+			description="ID des Veranstaltungsortes. Mehrere Veranstaltungsorte können durch Komma getrennt angegeben werden. 'all' für alle Veranstaltungsorte eingeben."
+			default="all"
+		/>
+        <field
+			name="person"
+			type="text"
+			label="Ansprechpartner"
+			description="ID der Ansprechpartner. Mehrere Ansprechpartner können durch Komma getrennt angegeben werden. 'all' für alle Ansprechpartner eingeben."
+			default="all"
+		/>
+        <field
+			name="bf"
+			type="textarea"
+			label="Barrrierefreiheit"
+			description="Legen Sie fest, welche Formen von Barrierefreiheit berücksichtigt werden sollen:
+						&lt;br /&gt;Angaben bei den Veranstaltungsorten:
+                        &lt;br /&gt;p1 => Rollstuhlgeeignet
+                        &lt;br /&gt;p2 => Induktionsanlage für Hörgeräte
+                        &lt;br /&gt;p3 => Behinderten WC
+                        &lt;br /&gt;p4 => Behindertenparkplatz
+                        &lt;br /&gt;
+                        &lt;br /&gt;Angaben bei der Veranstaltung:
+                        &lt;br /&gt;v1 = Veranstaltung in Gebärdensprache bzw. Gebärdendolmetscher ist anwesend
+                        &lt;br /&gt;v2 = Predigt / Liturgie der Veranstaltung liegt in schriftlicher Form vor
+                        &lt;br /&gt;v3 = Veranstaltung findet in Leichter Sprache statt
+                        &lt;br /&gt;v4 = Gebärdensprachdolmetscher kann bei Bedarf bestellt werden
+                        &lt;br /&gt;v5 = Abholung o. Fahrdienst kann bei Bedarf organisiert werden
+                        &lt;br /&gt;v6 = Induktive Höranlage
+                        &lt;br /&gt;v7 = FM-Anlage (drahtlose Funkanlage)
+                        &lt;br /&gt;v8 = Punktschrift / Großdruck auf Anfrage
+                        &lt;br /&gt;v9 = Begleitservice auf Anfrage
+                        &lt;br /&gt;Mehrere Angaben können durch Komma getrennt angegeben werden. 'all' für alle Veranstaltungen mit und ohne Barrierefreiheit eingeben."
+            rows="3"
+            default="all"
+        />
+        <field
+			name="ipm"
+			type="text"
+			label="Veranstaltungstyp"
+			description="ID des Veranstaltungstyps. Mehrere Veranstaltungstypen können mit Komma getrennt angegeben werden. 'all' für alle Veranstaltungstypen eingeben."
+			default="all"
+		/>
+        <field
+			name="cha"
+			type="text"
+			label="Kanal"
+			description="ID des Kanals. Mehrere Kanäle können mit Komma getrennt angegeben werden. 'all' für alle Kanäle eingeben."
+			default="all"
+		/>
+        <field
+			name="q"
+			type="text"
+			label="Suchbegriff"
+			description="Durchsucht die Felder Titel, Untertitel, Kurzbeschreibung, Langbeschreibung, Textbox 1-3, Textline 1-3, Ortsname, Stadt, Personenname und Kanalbezeichnung. 'none' eingeben, falls nach nichts gesucht werden soll."
+			default="none"
+		/>
+		<field
+			name="today"
+			type="radio"
+			label="Nur heute?"
+			description="Sollen nur Veranstaltungen angezeigt werden, die am aktuellen Tag stattfiinden?"
+			class="btn-group btn-group-yesno"
+			default="false"
+		 >
+			<option value="true">Ja, nur heutige Veranstaltungen anzeigen</option>
+			<option value="false">Nein, alle Veranstaltungen anzeigen</option>
+		</field>
+        <field
+			name="date"
+			type="text"
+			label="Bestimmtes Datum"
+			description="Zeigt nur Veranstaltungen an, die am angegebenen Datum sattfinden. Das Datum muss im Format TT.MM.YYYY angegeben werden!"
+			default=""
+		/>
+        <field
+			name="month"
+			type="text"
+			label="Bestimmter Monat"
+			description="Zeigt nur Veranstaltungen an, die in einem bestimmten Monat sattfinden. Das Datum muss im Format M.YY (z.B. '4.22' für April 2022 oder '10.22' für Oktober 2022) angegeben werden!"
+			default=""
+		/>
+        <field
+			name="year"
+			type="text"
+			label="Bestimmtes Jahr"
+			description="Zeigt nur Veranstaltungen an, die in einem bestimmten Jahr sattfinden. Das Jahr muss im Format YYYY angegeben werden! 'none' eingeben, falls alle Jahre berücksichtigt werden sollen."
+			default="none"
+		/>
+		<field
+			name="start"
+			type="text"
+			label="Veranstaltungen ab"
+			description="Zeigt alle Veranstaltungen nach dem angegebenen Datum an. Das Datum muss im Format YYYY-MM-DD angegeben werden (z.B. '2022-04-01' für alle Veranstaltungen nach dem 1. April 2022)."
+			default=""
+		/>
+		<field
+			name="end"
+			type="text"
+			label="Veranstaltungen bis"
+			description="Zeigt alle Veranstaltungen bis zum angegebenen Datum an. Das Datum muss im Format YYYY-MM-DD angegeben werden (z.B. '2025-12-25' für alle Veranstaltungen bis zum 25. Dezember 2025)."
+			default=""
+		/>
+        </fieldset>
+			<fieldset name="advanced">
+				<field
+					name="encoding"
+					type="list"
+					label="Zeichenkodierung"
+					description="Passen Sie die Zeichenkodierung des Moduls der Zeichenkodierung Ihrer Webseite an. Unterstützt werden 'latin-1 (ISO 8859-1)' und 'utf8'."
+					required="true"
+					>
+					<option value="">Bitte auswählen</option>
+					<option value="latin-1">latin-1</option>
+					<option value="utf8">utf8</option>
+				</field>
+			  <field
+				name="moduleclass_sfx"
+				type="textarea"
+				label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+				description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				rows="3"
+			  />
+        </fieldset>
+      </fields>
+    </config>
+	<updateservers>
+		<server type="extension" priority="2" name="Evangelische Termine Teaser GitHub Repository">https://raw.githubusercontent.com/herrpfarrer/Evangelische-Termine-Teaser/main/etteaserupdateserver.xml</server>
+	</updateservers>
+</extension>
