@@ -1,4 +1,4 @@
-# Evangelische-Termine-Teaser
+# Evangelische Termine Teaser
 Evangelische Termine Teaser ist ein simples Joomla-Modul, um Evangelische Termine in Joomla-Seiten als Teaser/Vorschau einzubinden.  
 
 ## Über das Modul Evangelische Termine Teaser für Joomla
