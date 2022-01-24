@@ -1,25 +1,51 @@
 <?php
 /**
- * Helper class für Modul Evangelische Termine Teaser
+ * @package    Evangelische Termine Teaser
+ *
+ * @author     Daniel Städtler - github_herrpfarrer@posteo.de
+ * @copyright  Copyright 2022 Daniel Städtler. – All rights reserved.
+ * @license    GNU General Public License version 3
+ * @link       https://github.com/herrpfarrer/Evangelische-Termine-Teaser
  */
+
+// Benötigt, um CSS-Dateien und JavaScript aus ET-Output in den Header der Joomla-Seite zu schreiben
+use Joomla\CMS\Factory;
+
 class modETTeaserHelper
 {
   
     public static function getTeaser($params)
     {
-      
-		// Link zum Veranstaltungskalender anzeigen?
-		$showlink = $params->get('showlink');
+		// =========================
+		// E I N S T E L L U N G E N
+		// =========================
+	
+	
+	
+		// A. MODUL-EINSTELLUNGEN
+		// ======================
 
-		// Link zum Veranstaltungskalender
-		$link = $params->get('link');
+		// Zeichenkodierung
+		// Passen Sie die Zeichenkodierung des Moduls der Zeichenkodierung Ihrer Webseite an. Unterstützt werden 'latin-1 (ISO 8859-1)' und 'utf8'.
+		$encoding = $params->get('encoding');
+		if($encoding == '' || $encoding == 'utf8'){
+			$encoding = 'utf8';
+			$encodingXML = 'utf8';
+		} elseif ($encoding == 'latin-1'){
+			$encodingXML = 'ISO 8859-1';
+		}
+
+		
+		
+		// B. KALENDEREINSTELLUNGEN
+		// ========================
 
 		// Veranstalter-ID
 		// Geben Sie hier Ihre Veranstalter-ID von www.evangelische-termine.de ein. Mehrere IDs können durch Komma getrennt angegeben werden.
 		// Für die Dekanatsausgabe geben Sie als Veranstalter-ID 'all' ein.
 		$veranstalterID = $params->get('veranstalterid');
 		if($veranstalterID == ''){
-			$veranstalterID = '2220';
+			$veranstalterID = '3';
 		}
 
 		// Dekanats-Nummer
@@ -157,7 +183,7 @@ class modETTeaserHelper
 
 		// Bestimmter Monat
 		// Zeigt nur Veranstaltungen an, die in einem bestimmten Monat sattfinden. Das Datum muss im Format M.YY (z.B. '4.22' für April 2022 oder '10.22' für Oktober 2022) angegeben werden!
-		$month = $params->get('month');;
+		$month = $params->get('month');
 		if($month != ''){
 		  $month = '&d=0&month='.$month;
 		}
@@ -177,7 +203,7 @@ class modETTeaserHelper
 
 		// Veranstaltungen bis
 		// Zeigt alle Veranstaltungen bis zum angegebenen Datum an. Das Datum muss im Format YYYY-MM-DD angegeben werden (z.B. '2025-12-25' für alle Veranstaltungen bis zum 25. Dezember 2025).
-		$end = $params->get('end'); // Wonsees: '';
+		$end = $params->get('end');
 		$end = '&end='.$end;
 		
 		if($start != '' and $end == ''){
@@ -191,21 +217,37 @@ class modETTeaserHelper
 			$end = '&end='.$end;
 		}		
 
-		// Breite (1) oder schmale (2) Ausgabe
-		$tpl = 2;
-
 		// Veranstaltungen über mehrere Tage werden bis zu Enddatum angezeigt yes|no
-		$until = 'yes';
-
-		// Zeichenkodierung
-		// Passen Sie die Zeichenkodierung des Moduls der Zeichenkodierung Ihrer Webseite an. Unterstützt werden 'latin-1 (ISO 8859-1)' und 'utf8'.
-		$encoding = $params->get('encoding');
-		if($encoding == '' || $encoding == 'utf8'){
-			$encoding = 'utf8';
-			$encodingXML = 'utf8';
-		} elseif ($encoding == 'latin-1'){
-			$encodingXML = 'ISO 8859-1';
+		$until  = $params->get('showuntil');
+		if ($until == ''){
+			$until = 'yes';
 		}
+      
+
+
+		// C. LAYOUTEINSTELLUNGEN
+		// ======================
+		
+		// Link zum Veranstaltungskalender anzeigen?
+		$showlink = $params->get('showlink');
+		if($showlink == ''){
+			$showlink = 'false';
+		}
+
+		// Link zum Veranstaltungskalender
+		$link = $params->get('link');
+
+		// Custom-CSS
+		// Passen Sie das aussehen des Moduls mit Hilfe von individuellem CSS-Code an.
+		$customstyle = $params->get('customstyle');
+
+		// Teaserformat
+		// Wählen Sie, wie breit der Teaser sein soll. (1 = breite, 2= schmal)
+		$tpl = $params->get('teaserformat');
+		if ($tpl == ''){
+			$tpl = '2';
+		}
+
 		
 		// ==========================================================================
 		// K O M M U N I K A TI O N   M I T   E V A N G E L I S C H E   T E R M I N E
@@ -249,6 +291,12 @@ class modETTeaserHelper
 			$pageContent = str_replace("et_", "etteaser_", $pageContent);
 					
 			$teaser = $pageContent;
+
+			// Ergänze Custom-CSS im Header der Joomla-Seite
+			$jdocument = Factory::getDocument();			
+			if ($customstyle != ''){
+				$jdocument->addStyleDeclaration($customstyle);
+			}
 		  
 		  } else {
 			  $teaser = "Der Terminkalender ist derzeit nicht erreichbar.";
