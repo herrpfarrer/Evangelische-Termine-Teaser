@@ -277,7 +277,7 @@
     </config>
 
 	<updateservers>
-		<server type="extension" priority="2" name="Evangelische Termine Teaser GitHub Repository">https://raw.githubusercontent.com/herrpfarrer/Evangelische-Termine-Teaser/main/etteaserupdateserver.xml</server>
+		<server type="extension" priority="2" name="Evangelische Termine Teaser GitHub Repository">https://raw.githubusercontent.com/herrpfarrer/Evangelische-Termine-Teaser/ETTeaser-Joomla-4.x/etteaserupdateserver.xml</server>
 	</updateservers>
 
 </extension>
