@@ -11,11 +11,9 @@
 // No direct access
 defined('_JEXEC') or die;
 
-// Include the syndicate functions only once
-require_once dirname(__FILE__) . '/helper.php';
-$teaser = modETTeaserHelper::getTeaser($params);
+use Joomla\CMS\Helper\ModuleHelper;
+use EvangelischeTermine\Module\EvangelischeTermineTeaser\Site\Helper\GetTeaserHelper;
 
-// Modulklassen-Suffix
-$moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
+$teaser = GetTeaserHelper::getTeaser($params);
 
-require JModuleHelper::getLayoutPath('mod_etteaser');
+require ModuleHelper::getLayoutPath('mod_etteaser', $params->get('layout', 'default'));
