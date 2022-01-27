@@ -14,7 +14,7 @@ Sie können das Modul Evangelische Termine Teaser für Joomla auch dann verwende
 
 ## Installation und Einrichtung
 ### unter Joomla 3.x  
-1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://github.com/herrpfarrer/Evangelische-Termine-Teaser/releases/download/1.0.1/etteaserv1.0.1j3.x.zip). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
+1. Laden Sie die aktuelle Version des Moduls herunter. Klicken Sie dazu hier: [Download](https://github.com/herrpfarrer/Evangelische-Termine-Teaser/releases/download/1.0.2/etteaserv1.0.2j3.x.zip). Sie brauchen die heruntergeladene Datei nicht zu entpacken.
 2. Melden Sie sich auf Ihrer Joomla-Seite an.
 3. Klicken Sie auf ‘Erweiterungen’ -> ‘Verwalten’ -> ‘Installieren’ -> ‘Paketdatei hochladen’.
 4. Ziehen Sie die .zip-Datei von Ihrem Download-Ordner in das Feld ‘Dateien zum Hochladen hier hereinziehen und ablegen’.
