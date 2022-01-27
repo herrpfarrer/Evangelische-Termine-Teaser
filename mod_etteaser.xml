@@ -6,8 +6,8 @@
 	<authorUrl>https://github.com/herrpfarrer/Evangelische-Termine-Teaser</authorUrl>
     <copyright>Copyright 2022 Daniel Städtler. – All rights reserved.</copyright>
     <license>GNU General Public License version 3</license>
-	<version>1.0.1</version>
-    <description>Integrieren Sie einen Teaser/eine Vorschau auf Termine, die Sie bei Evangelische Termine verwalten, in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Teaser' (v.1.0.1).</description>
+	<version>1.0.2</version>
+    <description>Integrieren Sie einen Teaser/eine Vorschau auf Termine, die Sie bei Evangelische Termine verwalten, in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Teaser' (v.1.0.2).</description>
     
 	<files>
         <filename>mod_etteaser.xml</filename>
