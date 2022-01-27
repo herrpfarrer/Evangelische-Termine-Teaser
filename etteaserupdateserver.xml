@@ -56,4 +56,23 @@
         <section>Updates</section>
         <targetplatform name="joomla" version="3" />
     </update>
+	<update>
+		<name>Evangelische Termine Teaser</name>
+		<description>Integrieren Sie einen Teaser/eine Vorschau auf Termine, die Sie bei Evangelische Termine verwalten, in Ihre Joomla-Seite mit dem Modul 'Evangelische Termine Teaser' (v.2.0).</description>
+		<element>mod_etteaser</element>
+		<type>module</type>
+        <client>site</client>
+		<version>2.0</version>
+		<infourl title="Joomla!">https://github.com/herrpfarrer/Evangelische-Termine-Teaser</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/herrpfarrer/Evangelische-Termine-Teaser/releases/download/2.0/etteaserv2.0j4.x.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer>Daniel Städtler</maintainer>
+		<maintainerurl>https://github.com/herrpfarrer/</maintainerurl>
+        <section>Updates</section>
+        <targetplatform name="joomla" version="4" />
+    </update>
 </updates>
