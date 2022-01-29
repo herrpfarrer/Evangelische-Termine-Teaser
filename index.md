@@ -1,5 +1,16 @@
-# Evangelische Termine Teaser
-Evangelische Termine Teaser ist ein simples Joomla-Modul, um Evangelische Termine in Joomla-Seiten als Teaser/Vorschau einzubinden.  
+> # Download
+> Evangelische Termine Teaser steht für Joomla 3.x und Joomla 4.x zu Verfügung. Laden Sie hier die passende Version herunter:  
+> [**Evangelische Termine Teaser für Joomla 4.x**](https://github.com/herrpfarrer/Evangelische-Termine-Teaser/releases/download/2.0/etteaserv2.0j4.x.zip)  
+> [**Evangelische Termine Teaser für Joomla 3.x**](https://github.com/herrpfarrer/Evangelische-Termine-Teaser/releases/download/1.0.2/etteaserv1.0.2j3.x.zip)  
+  
+  
+* [Über das Modul Evangelische Termine Teaser für Joomla](https://herrpfarrer.github.io/Evangelische-Termine-Teaser#über-das-modul-evangelische-termine-teaser-für-joomla)  
+* [Über Evangelische Termine](https://herrpfarrer.github.io/Evangelische-Termine-Teaser#über-evangelische-termine)  
+* [Installation und Einrichtung](https://herrpfarrer.github.io/Evangelische-Termine-Teaser#installation-und-einrichtung)  
+* [Probleme, Fragen, Tipps](https://herrpfarrer.github.io/Evangelische-Termine-Teaser#probleme-fragen-tipps)  
+* [Support und Kontakt](https://herrpfarrer.github.io/Evangelische-Termine-Teaser#support-und-kontakt)  
+* [Impressum](https://herrpfarrer.github.io/Evangelische-Termine-Teaser#impressum)  
+* [Datenschutz](https://herrpfarrer.github.io/Evangelische-Termine-Teaser#datenschutz)  
 
 ## Über das Modul Evangelische Termine Teaser für Joomla
 Evangelische Termine Teaser ist ein kostenloses und freies (Open Source) Modul für das CMS Joomla. Module sind kleine Erweiterungen für Ihre Joomla-Seite. Sie können Evangelische Termine Teaser mit wenigen Klicks installieren und anschließend an jeder beliebigen Stelle Ihrer Internetseite einbinden, z.B. einem einzelnen Beitrag, einer Seitenleiste oder dem Footer. Das Modul zeigt dann an dieser Stelle eine Vorschau auf Ihre nächsten Termine an.  
@@ -54,11 +65,69 @@ Um die Farben zu ändern, öffnen Sie die Einstellungen des Moduls. Unter dem Re
 ## Support und Kontakt
 Es gibt keinen offiziellen Support. Bei Bugs und Fehlern können Sie einen Issue erstellen. Den Besitzer des Repository, Daniel Städtler, können Sie per E-Mail (github_herrpfarrer@posteo.de) kontaktieren.
 
-## Impressum  
+## Impressum und Datenschutz
+### Impressum
 #### Angaben gemäß § 5 TMG
 Daniel Städtler  
 Marktplatz 18  
 96197 Wonsees  
 #### Kontakt
 Telefon: +49  (0)  9274 / 245  99  97  
-E-Mail: github_herrpfarrer@posteo.de  
+E-Mail: github_herrpfarrer@posteo.de
+### Datenschutz
+#### Verantwortlich im Sinne der Datenschutzgesetzes:
+Daniel Städtler  
+Marktplatz 18  
+96197 Wonsees  
+Telefon: +49  (0)  9274 / 245  99  97  
+E-Mail: github_herrpfarrer@posteo.de
+Im Folgenden »Besitzer des Repository« genannt.
+#### Welche Daten werden erfasst?
+Wenn Sie diese Website benutzen, werden vom Besitzer des Repository keinerlei personenbezogene Daten erhoben. Die Webseite nutzt keine Anlayse-Dienste, bindet keine externen Quellen ein und auch Cookies werden nicht genutzt. Personenbezogene Daten werden nur dann erfasst, wenn Sie diese von sich aus aktiv mitteilen, z.B. per E-Mail.
+#### Wofür werden die Daten genutzt?
+Wenn Sie uns eine E-Mail schreiben, werden die von Ihnen dort angegebenen personenbezogenen Daten vom Besitzer des Repository verarbeitet. Die Verarbeitung dieser personenbezogenen Daten ist notwendig für die Beantwortung Ihrer Anfrage. Zusätzlich werden Ihre IP-Adresse und Datum und Uhrzeit der Kontaktaufnahme gespeichert. Die Datenverarbeitung dient der Beantwortung Ihrer Anfrage und die Sicherheit unserer informationstechnischen Systeme zu gewährleisten. Die personenbezogenen Daten werden solange gespeichert, wie dies zur Beantwortung Ihrer Anfrage erforderlich ist. Der Besitzer des Repository führt diese personenbezogenen Daten nicht mit anderen Datenquellen zusammen. Eine Datenweitergabe an Dritte findet nicht statt. Eine Übermittlung in ein Drittland oder an eine internationale Organisation ist nicht beabsichtigt. Sie sind zur Bereitstellung dieser personenbezogenen Daten nicht verpflichtet, der Versand einer E-Mail ist ohne die Bereitstellung jedoch nicht möglich.
+#### Rechte des Nutzers
+Sie haben als Nutzer das Recht, auf Antrag eine kostenlose Auskunft darüber zu erhalten, welche personenbezogenen Daten über Sie gespeichert wurden. Sie haben außerdem das Recht auf Berichtigung falscher Daten und auf die Verarbeitungseinschränkung oder Löschung Ihrer personenbezogenen Daten. Falls zutreffend, können Sie auch Ihr Recht auf Datenportabilität geltend machen. Sollten Sie annehmen, dass Ihre Daten unrechtmäßig verarbeitet wurden, können Sie eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen.  
+
+Beschwerderecht bei der zuständigen Aufsichtsbehörde  
+Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
+Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes
+oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger
+verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.  
+
+Recht auf Datenübertragbarkeit  
+Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags
+automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format
+aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen
+verlangen, erfolgt dies nur, soweit es technisch machbar ist.  
+
+Auskunft, Löschung und Berichtigung  
+Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche
+Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den
+Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie
+zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.  
+
+Recht auf Einschränkung der Verarbeitung  
+Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in
+folgenden Fällen:
+Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir
+in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die
+Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie
+statt der Löschung die Einschränkung der Datenverarbeitung verlangen.
+Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung,
+Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der
+Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen
+Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen
+überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten
+zu verlangen.
+Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, dürfen diese Daten – von
+ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder
+Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder
+juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder
+eines Mitgliedstaats verarbeitet werden.
+
+#### Hosting mit GitHub Pages
+Diese Webseite wird gehostet auf Servern der Github Inc., 88 Colin P Kelly Jr. Street, San Francisco, CA 94107, USA. GitHub kann beim Aufruf dieser Webseiten technische Informationen inklusive ihrer IP Adresse aufzeichnen. Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von GitHub unter https://help.github.com/articles/github-privacy-policy.
