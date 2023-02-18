@@ -38,6 +38,10 @@
 	margin-bottom:4px;
 }
 
+.etteaser_more a{
+  text-decoration: none;
+}
+
 .etteaser_more a:before {
     content: " \27A4 \00a0";
 }
